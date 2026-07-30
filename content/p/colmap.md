@@ -9,7 +9,7 @@ developer = "Johannes Schönberger and the COLMAP contributors"
 license = "BSD-3-Clause"
 open_source = true
 price_model = "Free / open source"
-price_detail = "Distributed free of charge under the New BSD license. No pricing is stated on the sources."
+price_detail = "Distributed free of charge under the New BSD license. No pricing is stated."
 platforms = [
   "Windows",
   "macOS",
@@ -48,8 +48,8 @@ pros = [
   "Handles both ordered and unordered image collections",
 ]
 cons = [
-  "Documentation does not describe orthophoto, DSM, DTM, or contour generation",
-  "No hosted cloud processing is described on the sources",
+  "No orthophoto, DSM, DTM, or contour generation",
+  "No hosted cloud processing",
   "Geospatial mapping outputs common to drone-survey tools are not part of the documented pipeline",
 ]
 typical_workflow = [
@@ -100,7 +100,7 @@ classification = "unknown"
 annotations = "unknown"
 
 [extra.feature_notes]
-image_input = "Docs state SfM recovers structure from 'ordered or unordered image collections,' which per the special case confirms both nadir and oblique."
+image_input = "SfM recovers structure from 'ordered or unordered image collections,' which per the special case confirms both nadir and oblique."
 coordinate_systems = "Geo-registration via model_aligner using camera-center coordinates; supports GPS lat/lon/alt with conversion to ECEF or ENU frames. Not a full EPSG catalog reprojection tool."
 point_cloud = "Dense point cloud produced by the MVS pipeline (PatchMatch stereo plus stereo fusion)."
 mesh_3d = "Surface mesh via Poisson, Delaunay, or advancing-front reconstruction; textured mesh via the mesh_texturer command."

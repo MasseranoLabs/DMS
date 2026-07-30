@@ -40,11 +40,11 @@ latest_version = "V9"
 first_release_year = "2013"
 official_url = "https://www.greenvalleyintl.com/LiDAR360"
 key_features = [
-  "Processing of massive point cloud datasets (docs state more than 300 GB of point cloud data can be processed)",
+  "Processing of massive point cloud datasets (more than 300 GB of point cloud data can be processed)",
   "Point cloud classification with multiple methods: ground, model key points, machine learning and deep learning models, plus custom trained models, covering over 32 features",
   "Terrain module producing DEM, DSM, DTM, CHM, contours and related products, plus REM, drainage and flood-area analysis",
   "Photo (photogrammetry) module creating RGB, infrared and multispectral orthophotos (DOM), with automatic target detection and GCP matching",
-  "Spectrum module for spectral data with NDVI, NDWI and other indices (113 spectral indices cited in the docs)",
+  "Spectrum module for spectral data with NDVI, NDWI and other indices (113 spectral indices cited)",
   "Forestry module for individual tree segmentation and attributes such as trunk volume, DBH, crown, curvature and biomass",
   "Mine module for earthwork/volume calculation, crest and toe extraction, section analysis, and tunnel modeling and deformation monitoring",
   "Vectorization module with 2D/3D semi-automatic extraction and drawing tools and SAM-based outline extraction",
@@ -140,7 +140,7 @@ change_detection = "Multi-temporal dataset comparison and multi-temporal volume 
 classification = "Point cloud classification with 26 AI categories, deep learning, IPTD ground detection."
 +++
 
-LiDAR360, launched in 2013 by GreenValley International Inc (GVI), a company headquartered in Berkeley, California, is a desktop platform for processing point cloud data. The vendor describes it as employing point cloud algorithms together with artificial intelligence and machine learning to process LiDAR and photogrammetric data. The software is organized into modules, and the GVI store lists a V9 release with Framework, Terrain, Forestry, Mine, 3D Building, Photo, Spectrum and Distributed Computing modules.
+LiDAR360, launched in 2013 by GreenValley International Inc (GVI), a company headquartered in Berkeley, California, is a desktop platform for processing point cloud data. It employs point cloud algorithms together with artificial intelligence and machine learning to process LiDAR and photogrammetric data. The software is organized into modules, and the GVI store lists a V9 release with Framework, Terrain, Forestry, Mine, 3D Building, Photo, Spectrum and Distributed Computing modules.
 
 The platform covers preprocessing (trajectory adjustment, data registration, color adjustment and reprojection), point cloud classification (ground, machine learning, deep learning and custom trained models, covering over 32 features), and generation of terrain products such as DEM, DSM, DTM, CHM and contours. A Photo module performs photogrammetry with GCP matching and produces RGB, infrared and multispectral orthophotos (DOM), while the Spectrum module computes indices such as NDVI and NDWI. Additional modules address forestry (individual tree segmentation and attributes), mining (earthwork, section and volume-change analysis, tunnel modeling), and vectorization.
 

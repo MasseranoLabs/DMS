@@ -44,7 +44,7 @@ key_features = [
 ]
 pros = [
   "Free and open source under MPLv2 with published source code",
-  "Cross-platform with pre-compiled binaries and buildable from source",
+  "Cross-platform with pre-compiled binaries and buildable",
   "Produces dense point clouds and textured 3D meshes",
   "Automatable and extensible through a Python node API and command-line interface",
   "Supports distributed processing across render farms",
@@ -90,7 +90,7 @@ gaussian_splatting = "yes"
 cad_export = "unknown"
 desktop = "yes"
 cloud = "unknown"
-self_hosted = "yes"
+self_hosted = "unknown"
 api = "yes"
 gpu = "yes"
 web_viewer = "unknown"
@@ -107,11 +107,10 @@ image_input = "AliceVision/Meshroom performs incremental Structure-from-Motion f
 video = "KeyframeSelection node extracts keyframes from video for reconstruction; supported formats include mp4, mov, mkv, avi, etc."
 point_cloud = "Dense point cloud produced by DepthMap + Meshing (Output Dense Point Cloud, densePointCloud.abc) and exportable via ExportColoredPointCloud node."
 mesh_3d = "Meshing node outputs mesh.obj; Texturing node creates UVs and textures (texturedMesh.obj/.mtl), i.e. a 3D textured mesh."
-gaussian_splatting = "GitHub README lists a bundled default plugin 'GSplat: 3D Gaussian Splatting reconstruction integrated with photogrammetry' (Meshroom develop/latest)."
+gaussian_splatting = "A bundled default plugin 'GSplat: 3D Gaussian Splatting reconstruction integrated with photogrammetry' (Meshroom develop/latest)."
 desktop = "Meshroom is a free desktop application (GUI) with pre-built binaries per the official manual installation page."
-self_hosted = "Free open-source software installed and run on the user's own hardware; official docs describe local execution and distributed computation on your own render farms."
 api = "Documented Command Line Features (standalone AliceVision CLI executables) plus a Python node-based framework where users create custom nodes / integrate command-line tools."
-gpu = "DepthMap node documentation states 'This node requires CUDA', i.e. GPU (NVIDIA/CUDA) acceleration is required for dense reconstruction."
+gpu = "DepthMap node. 'This node requires CUDA', i.e. GPU (NVIDIA/CUDA) acceleration is required for dense reconstruction."
 +++
 
 AliceVision is a photogrammetric computer vision framework that provides 3D reconstruction and camera tracking algorithms, inferring scene geometry from unordered photographs or videos. It originated from collaboration between academic and industrial partners, including the CMP research team at CTU, Toulouse INP, INRIA, Mikros Image, and the IMAGINE team, in the context of projects such as the EU POPART and LADIO efforts. It is distributed under the Mozilla Public License v2.0 (with MIT covering libmv-derived components).

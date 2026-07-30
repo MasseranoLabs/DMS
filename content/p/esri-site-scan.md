@@ -40,7 +40,7 @@ key_features = [
   "Automated drone flight planning via the ArcGIS Flight mobile app",
   "Drone fleet management with custom preflight checklists",
   "Outputs include orthomosaic, DSM, DTM, point cloud, and textured mesh, stored in the cloud",
-  "Point clouds exported in .rcs, .las, and .laz formats",
+  "Point clouds exported in.rcs,.las, and.laz formats",
   "In-viewer measurement of distances, surface areas, and volumetrics",
   "Cut/fill maps and volume calculations, including import of a LandXML surface",
   "Ground control point support with automatic GCP detection and checkpoint accuracy validation",
@@ -57,7 +57,7 @@ pros = [
 ]
 cons = [
   "Pricing is not published; a sales inquiry is required to obtain cost information",
-  "Processing is described only as cloud-based, with no self-hosted or offline processing option documented",
+  "Processing is only cloud-based, with no self-hosted or offline processing option documented",
   "Deeper spectral analysis such as pixel querying and image classification is directed to ArcGIS Pro rather than performed in Site Scan itself",
 ]
 typical_workflow = [
@@ -110,12 +110,12 @@ annotations = "yes"
 image_input = "Standard nadir/area surveys; crosshatch combines oblique and nadir imagery."
 multispectral = "FAQ: multispectral imagery can be processed (processed via the Legacy engine)."
 thermal = "FAQ: thermal imagery can be processed; Reality Engine also generates thermal True Orthos."
-rtk_ppk = "RTK drone support is documented (e.g. DJI Matrice 300 RTK, Freefly Astro); PPK not explicitly named."
+rtk_ppk = "RTK drone support (e.g. DJI Matrice 300 RTK, Freefly Astro); PPK not explicitly named."
 accuracy_report = "Site Scan processing report conveys quality and accuracy of outputs; GCPs enable ~1 cm accuracy."
 coordinate_systems = "Output settings let you set output horizontal coordinate system and vertical datum."
 point_cloud = "Dense point cloud output in LAS and LAZ formats."
 mesh_3d = "3D mesh outputs in SLPK (default) and OBJ; RCM/FBX via Autodesk ReCap engine."
-gaussian_splatting = "Esri's own ArcGIS blog \\\"What's New in Site Scan for ArcGIS\\\" (Q2/May 2026, www.esri.com/arcgis-blog/products/site-scan/imagery/whats-new-in-site-scan-for-arcgis-q2-2026) states Site Scan \\\"now supports cloud-based generation of Gaussian splat layers... directly from drone imagery\\\" and instructs users to \\\"select Generate Gaussian Splat Layer under Processing Settings.\\\" A second Esri blog (how-to-crea"
+gaussian_splatting = "Esri's own ArcGIS blog \"What's New in Site Scan for ArcGIS\" (Q2/May 2026, www.esri.com/arcgis-blog/products/site-scan/imagery/whats-new-in-site-scan-for-arcgis-q2-2026) states Site Scan \"now supports cloud-based generation of Gaussian splat layers.. Directly from drone imagery\" and instructs users to \"select Generate Gaussian Splat Layer under Processing Settings.\" A second Esri blog (how-to-crea"
 cad_export = "Contours can be exported to DXF (Autodesk/AutoCAD format); DWG and LandXML not documented."
 cloud = "Site Scan is a cloud-based SaaS; imagery is processed in Esri's cloud."
 web_viewer = "Browser-based Site Scan Manager with 2D/3D viewers; publish/share to ArcGIS Online/Enterprise."

@@ -54,7 +54,7 @@ cons = [
   "The free UgCS Open tier is limited to 2 route uploads/exports per day, routes no longer than 250 m between the furthest points, and no more than 2 concurrent projects",
   "LiDAR toolset and DSM support require the EXPERT edition, while multi-drone operation, live video streaming, SDK access and server deployment require the ENTERPRISE edition",
   "Perpetual licenses require purchasing an annual Support & Update pack from the second year to keep receiving updates and support",
-  "The vendor describes UgCS as flight/mission planning software and offers a separate product (GeoHammer) for multi-sensor data processing, so imagery-to-map processing is not documented as part of UgCS itself",
+  "UgCS is flight/mission planning software, with a separate product (GeoHammer) for multi-sensor data processing, so imagery-to-map processing is not part of UgCS itself",
 ]
 typical_workflow = [
   "Define the survey area and import terrain data (custom DEM/DSM) or use cached elevation data",
@@ -102,7 +102,7 @@ classification = "unknown"
 annotations = "yes"
 
 [extra.feature_notes]
-image_input = "UgCS Mapper stitches georeferenced aerial JPG images into an orthomosaic (nadir/top-down mapping imagery). No explicit oblique/3D reconstruction is documented."
+image_input = "UgCS Mapper stitches georeferenced aerial JPG images into an orthomosaic (nadir/top-down mapping imagery). No explicit oblique/3D reconstruction."
 multispectral = "UgCS Mapper stitches multispectral 3-channel RGN JPEG images (e.g., Micasense RedEdge-M / RedEdge-MX)."
 video = "UgCS Mapper does 'Video orthophoto processing' (video frames turned into maps); UgCS Enterprise also supports a live geotagged video stream."
 orthomosaic = "Produced by UgCS Mapper, a UgCS-branded desktop image/video processing tool: 'Stitch multispectral and any other aerial drone images into one orthomosaic.'"

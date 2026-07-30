@@ -66,8 +66,8 @@ pros = [
 ]
 cons = [
   "Proprietary commercial software; only a trial is offered beyond paid subscription or perpetual licenses",
-  "Cloud processing is customer-managed (install on your own AWS or Azure GPU VM); the sources describe no vendor-hosted SaaS",
-  "Only Windows system requirements are documented; macOS and Linux are not mentioned",
+  "Cloud processing is customer-managed (install on your own AWS or Azure GPU VM), with no vendor-hosted SaaS",
+  "Only Windows system requirements; macOS and Linux are not mentioned",
   "Pricing for the Medium Format, Large Format, and Satellite tiers is not published and requires contacting sales",
   "Vendor materials include comparative speed and accuracy claims that are not independently verifiable from the site",
 ]
@@ -105,7 +105,7 @@ gaussian_splatting = "yes"
 cad_export = "yes"
 desktop = "yes"
 cloud = "yes"
-self_hosted = "yes"
+self_hosted = "unknown"
 api = "yes"
 gpu = "yes"
 web_viewer = "yes"
@@ -118,16 +118,15 @@ classification = "unknown"
 annotations = "unknown"
 
 [extra.feature_notes]
-image_input = "Features page lists 'Multi-camera setups & obliques'; docs describe adding oblique imagery to improve results."
+image_input = "'Multi-camera setups & obliques'. Adding oblique imagery to improve results."
 thermal = "User Manual: reads radiometric thermal data from R-JPEG images and offers a Thermal mosaic export format."
 lidar = "Imports LiDAR point clouds (LAS/LAZ) and automatically registers imagery with LiDAR; orthorectifies from LiDAR DEMs."
 rtk_ppk = "AT module supports RTK/PPK Assisted bundle adjustment with corrected positions from EXIF or text file; v11.1 adds direct georeferencing."
 coordinate_systems = "Supports selecting projection by EPSG code, custom projection, or Proj.4 definition; output projection specified."
 mesh_3d = "3D model generation creates a mesh and applies texture from input images (photorealistic textured model)."
-gaussian_splatting = "SimActive's own product feature page (https://www.simactive.com/correlator3d-mapping-software-features) explicitly states Correlator3D \\\"produces ... Gaussian splat models,\\\" and lists \\\"Gaussian Splat Generation\\\" as a processing module and \\\"Splat Model Editing\\\" among its editing tools. The homepage (https://www.simactive.com) also lists \\\"Gaussian Splat Models\\\" among output types. Web search budget w"
+gaussian_splatting = "Correlator3D produces Gaussian splat models, with 'Gaussian Splat Generation' as a processing module and 'Splat Model Editing' among its editing tools; 'Gaussian Splat Models' is listed among output types."
 cad_export = "Contours/vectors export to AutoCAD 2000 DXF (.dxf) and ESRI Shapefile (.shp)."
 cloud = "Cloud processing is done by the user installing Correlator3D on their own GPU-enabled AWS/Azure Windows VM, not a vendor-hosted SaaS."
-self_hosted = "Desktop application installed on-premise; node-locked or floating licenses; distributed processing runs across PCs on the local network."
 api = "Python API plus script mode / command line for automation."
 web_viewer = "Generates a shareable online data viewer link via integrated Cesium (requires a Cesium subscription/account)."
 measurements = "In-viewer Profile tool (elevation profile along a path) and Volume tool (measure cut/fill volume over a selection)."

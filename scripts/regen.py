@@ -188,6 +188,13 @@ add-on, hosted service, or a specific paid edition; note the caveat).
   - "image_input" means the product accepts photographs or images as input (from any \
 angle). Confirm it whenever the sources describe image-based / photogrammetric \
 reconstruction from photos.
+  - "tiles_3d" means OGC 3D Tiles output specifically (Cesium 3D Tiles, tileset.json, \
+b3dm / pnts). A Potree octree, Esri i3s, OSGB, or a generic "tiled / streamable model" \
+is NOT OGC 3D Tiles; mark it "unknown" unless OGC or Cesium 3D Tiles is explicitly named.
+  - "self_hosted" means the software offers a server you can run on your own hardware \
+(an on-premise / self-hosted server). A desktop app that merely runs locally, an \
+SDK / library, or distributing compute across LAN machines does NOT qualify; mark those \
+"unknown".
 - Scan the sources thoroughly. Features are often documented only on feature, product, \
 documentation, support, or pricing sub-pages, not the landing page; read the sub-pages \
 before deciding, and do not conclude "unknown" from the home page alone.
@@ -200,6 +207,11 @@ limitations you cannot confirm.
 - Describe the product under its OWN name and branding; do not attribute it to an \
 upstream or related project unless the sources explicitly do.
 - Do not use em dashes anywhere in the output; use commas, colons, or parentheses.
+- State every fact DIRECTLY. It is implied that all facts come from the sources, so do \
+NOT attribute them in the text: never write "the README describes", "the docs state", \
+"the documentation notes", "the page says", "the vendor states", "per the reviewed \
+sources", "the reviewed pages say", "is documented as", "is described as", or similar. \
+Write the capability itself, not that a source mentions it.
 - license: for an open-source product, give ONE standard SPDX identifier only (for \
 example MIT, BSD-3-Clause, GPL-3.0, AGPL-3.0, LGPL-3.0, MPL-2.0, Apache-2.0, CECILL-B) \
 and set open_source true; do not add verbose descriptions or secondary/component \
@@ -247,7 +259,7 @@ def norm_license(license: str, open_source, price_model: str = "") -> str:
 
 
 def _q(s: str) -> str:
-    return '"' + s.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ") + '"'
+    return '"' + s.replace("\\", "\\").replace('"', '\\"').replace("\n", " ") + '"'
 
 
 def _arr(items) -> str:

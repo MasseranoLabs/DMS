@@ -62,8 +62,8 @@ pros = [
 cons = [
   "Aerial/UAV imagery, dense surface modeling, point cloud/LiDAR handling, geographic coordinate systems, and video import are limited to the higher-priced Premium edition",
   "The documented UAV workflow requires manually marking Ground Control Points across multiple images with the Triangle tool",
-  "The help documentation notes that mismatched vertical datums commonly cause discrepancies between GCPs and UAV GPS, requiring manual coordinate-system verification",
-  "Documentation describes only a Windows desktop application; no vendor-hosted cloud or self-hosted server option is described",
+  "The help. Mismatched vertical datums commonly cause discrepancies between GCPs and UAV GPS, requiring manual coordinate-system verification",
+  "Only a Windows desktop application; no vendor-hosted cloud or self-hosted server option",
 ]
 typical_workflow = [
   "Create a SmartMatch/DSM (UAV) project and load photos or video via the New Project Wizard",
@@ -111,14 +111,14 @@ classification = "unknown"
 annotations = "unknown"
 
 [extra.feature_notes]
-image_input = "Aerial drone/UAS mapping over an area (top-down) is documented; UAS support is now part of PhotoModeler Premium."
+image_input = "Aerial drone/UAS mapping over an area (top-down); UAS support is now part of PhotoModeler Premium."
 lidar = "Premium can import LiDAR and point cloud data to work alongside photos; import only, not LiDAR capture/generation."
 video = "Video files (MOV/MP4/AVI/etc.) can be imported and used like still photos; Premium."
 gcp = "Ground Control Point setup documented for UAV/drone projects; control points are core to PhotoModeler."
 rtk_ppk = "Vendor drone/survey article states the software supports PPK and RTK camera positioning to reduce/eliminate ground control."
 accuracy_report = "Project quality/accuracy output (residuals/precision statistics) plus PDF report export; PDF report is Premium only."
 coordinate_systems = "Geographic Coordinate Systems with georeferencing, definable by WKT and Proj4; Premium (Geographic Systems)."
-orthomosaic = "Documented as ortho-photo output (rectified imagery over the mapped area), exported to TIF/JPG."
+orthomosaic = "Ortho-photo output (rectified imagery over the mapped area), exported to TIF/JPG."
 dsm = "Dense Surface Model (DSM) via SmartMatch; a Premium feature."
 point_cloud = "Dense point cloud from DSM; import/export via LAS, PLY, etc."
 mesh_3d = "Dense/photo-textured mesh; some mesh formats (PLY, FACET, etc.) are Premium only."

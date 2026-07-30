@@ -10,7 +10,7 @@ country = "China"
 license = "Proprietary"
 open_source = false
 price_model = "Paid (commercial license, free trial available)"
-price_detail = "Sold as Standard and Flagship versions (and additional editions) through official DJI dealers. Standard, Flagship, and Education versions are described as perpetual; the Agriculture version is a 1-year (365-day) license. From v5.0.0 onward, no upgrade or maintenance fees are required and paid users can upgrade to v5.0.0 free of charge. A one-month free trial is offered, limited to reconstruction from no more than 500 photos and LiDAR reconstruction data of no more than 8 GB. License activation is tied to a single computer and cannot be transferred between devices."
+price_detail = "Sold as Standard and Flagship versions (and additional editions) through official DJI dealers. Standard, Flagship, and Education versions are perpetual; the Agriculture version is a 1-year (365-day) license. From v5.0.0 onward, no upgrade or maintenance fees are required and paid users can upgrade to v5.0.0 free of charge. A one-month free trial is offered, limited to reconstruction from no more than 500 photos and LiDAR reconstruction data of no more than 8 GB. License activation is tied to a single computer and cannot be transferred between devices."
 platforms = [
   "Windows 10 or later (64-bit)",
 ]
@@ -37,8 +37,8 @@ first_release_year = "unknown"
 official_url = "https://enterprise.dji.com/dji-terra"
 key_features = [
   "2D reconstruction producing digital orthophoto maps (DOM) and digital surface models (DSM) in GeoTIFF format using UTM projection",
-  "3D reconstruction producing LOD models (.osgb, .b3dm, .s3mb), textured meshes (.ply, .obj, .fbx, .i3s), and point clouds (.pnts, .las, .laz, .s3mb)",
-  "LiDAR reconstruction from Zenmuse L1 and L2 data, output as .pnts, .las, .s3mb, .ply, and .pcd",
+  "3D reconstruction producing LOD models (.osgb,.b3dm,.s3mb), textured meshes (.ply,.obj,.fbx,.i3s), and point clouds (.pnts,.las,.laz,.s3mb)",
+  "LiDAR reconstruction from Zenmuse L1 and L2 data, output as.pnts,.las,.s3mb,.ply, and.pcd",
   "3D Gaussian Splatting reconstruction (v5.0.0 and later)",
   "2D multispectral reconstruction with calculated vegetation indices",
   "Support for Ground Control Points (GCPs) and aerotriangulation with reprojection-error and 3D-error reporting",
@@ -48,13 +48,13 @@ key_features = [
 ]
 pros = [
   "Processes multiple input types: nadir, oblique, multispectral, and LiDAR data",
-  "Exports a range of 2D, 3D, and LiDAR formats (GeoTIFF, .osgb, .b3dm, .obj, .fbx, .las, .laz, .ply, .pcd)",
+  "Exports a range of 2D, 3D, and LiDAR formats (GeoTIFF,.osgb,.b3dm,.obj,.fbx,.las,.laz,.ply,.pcd)",
   "Supports GCPs, RTK geotags, and aerotriangulation with an accuracy/quality report",
   "Cluster computation option for large datasets",
   "Standard, Flagship, and Education versions are perpetual, with no upgrade or maintenance fees from v5.0.0 onward",
 ]
 cons = [
-  "Runs only on Windows; the vendor states it is not compatible with operating systems other than Windows, such as macOS",
+  "Runs only on Windows; not compatible with operating systems other than Windows, such as macOS",
   "Stated as not compatible with non-NVIDIA graphics cards, such as AMD",
   "License activation is limited to a single computer and cannot be transferred between devices",
   "Free trial is capped at 500 photos and 8 GB of LiDAR data",
@@ -114,7 +114,7 @@ coordinate_systems = "Over 8500 built-in coordinate systems selectable by name o
 dtm = "Bare-ground DEM generated via LiDAR ground-point classification (excludes buildings/vegetation)."
 contours = "Contour lines generated from DEM/DSM (LiDAR point cloud missions); exportable as DXF."
 tiles_3d = "Outputs LOD/tiled model formats: b3dm and pnts (Cesium 3D Tiles), i3s, osgb, s3mb."
-gaussian_splatting = "The official DJI Terra product page (enterprise.dji.com/dji-terra, redirected from dji.com/dji-terra) explicitly states: \\\"DJI Terra is 3D modeling software equipped with next-generation reconstruction technologies, including 3D Gaussian Splatting,\\\" and features a \\\"Photorealistic Gaussian Splatting\\\" section. It also notes the capability arrived in version 5.0.0 and invites prior trial users to reap"
+gaussian_splatting = "The official DJI Terra product page (enterprise.dji.com/dji-terra, redirected from dji.com/dji-terra) explicitly states: \"DJI Terra is 3D modeling software equipped with next-generation reconstruction technologies, including 3D Gaussian Splatting,\" and features a \"Photorealistic Gaussian Splatting\" section. It also notes the capability arrived in version 5.0.0 and invites prior trial users to reap"
 cad_export = "Exports DXF (contours, point grid); LandXML supported from V4.2 (GeoJSON also added)."
 desktop = "Windows desktop application (Windows 10 64-bit or newer)."
 gpu = "GPU-accelerated reconstruction; requires an NVIDIA GPU (system requirements)."
@@ -130,4 +130,4 @@ DJI Terra is a Windows desktop application from DJI for reconstructing drone-cap
 
 The software handles georeferencing through Ground Control Points (GCPs) and RTK/POS geotags, and its aerotriangulation workflow reports GCP reprojection errors, GCP 3D errors, and camera calibration information. Output formats include GeoTIFF for 2D maps; .osgb, .b3dm, and .s3mb for LOD models; .ply, .obj, .fbx, and .i3s for textured meshes; and .pnts, .las, .laz, .s3mb, .ply, and .pcd for point clouds. Missions supported include Mapping, Oblique, Corridor, Waypoints, and Detailed Inspection.
 
-DJI Terra runs on Windows 10 or later (64-bit) and requires an NVIDIA GPU; the vendor states it is not compatible with macOS or with non-NVIDIA graphics cards. It offers single-machine and cluster computation across networked worker devices. It is sold in multiple editions through DJI dealers, with Standard, Flagship, and Education versions described as perpetual and the Agriculture version as a 1-year license; a one-month free trial is limited to 500 photos and 8 GB of LiDAR data. The latest version listed is V5.3.0 (released 2026-07-23).
+DJI Terra runs on Windows 10 or later (64-bit) and requires an NVIDIA GPU; it is not compatible with macOS or with non-NVIDIA graphics cards. It offers single-machine and cluster computation across networked worker devices. It is sold in multiple editions through DJI dealers, with Standard, Flagship, and Education versions being perpetual and the Agriculture version a 1-year license; a one-month free trial is limited to 500 photos and 8 GB of LiDAR data. The latest version listed is V5.3.0 (released 2026-07-23).

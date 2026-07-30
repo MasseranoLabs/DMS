@@ -13,6 +13,7 @@
   {"name": "3DF Zephyr", "sources": ["https://www.3dflow.net/3df-zephyr-pro-3d-models-from-photos/"]},
   {"name": "AliceVision", "sources": ["https://alicevision.org", "https://github.com/alicevision/meshroom", "https://meshroom.org/index.php/sample-page/", "https://meshroom-manual.readthedocs.io/en/latest/"]},
   {"name": "COLMAP", "sources": ["https://colmap.github.io", "https://github.com/colmap/colmap", "https://colmap.github.io/tutorial.html"]},
+  {"name": "OpenSfM", "sources": ["https://github.com/OpenSfM/OpenSfM", "https://opensfm.org/docs/"]},
   {"name": "MicMac", "sources": ["https://micmac.ensg.eu", "https://github.com/micmacIGN/micmac"]},
   {"name": "PhotoModeler", "sources": ["https://www.photomodeler.com"]},
   {"name": "Autel Mapper", "sources": ["https://www.autelrobotics.com", "https://www.autelrobotics.com/productdetail/autel-mapper/"]},

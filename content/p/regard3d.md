@@ -47,11 +47,11 @@ pros = [
   "Exports to standard formats (OBJ, PLY, PCD) and integrates with external tools such as MeshLab and additional MVS programs",
 ]
 cons = [
-  "Only JPEG images are supported as input, per the documentation",
+  "Only JPEG images are supported as input",
   "Requires the focal length and sensor size of at least some pictures to be known, either via EXIF metadata with the camera present in the camera database or entered manually",
   "The global structure-from-motion engine is available only when all pictures are taken from the same camera and with the same zoom setting",
   "64-bit only; does not run on Windows XP (Vista untested), requires Windows 7 or newer or macOS 10.7 or newer, an OpenGL-capable graphics card, and 4 GB RAM minimum (8 GB or more recommended for larger projects)",
-  "Texture creation requires substantially more time and memory than vertex coloring, especially with large projects, per the documentation",
+  "Texture creation requires substantially more time and memory than vertex coloring, especially with large projects",
 ]
 typical_workflow = [
   "Create a project",
@@ -106,7 +106,7 @@ mesh_3d = "Textured 3D surface mesh via Poisson Surface Reconstruction or FSSR; 
 desktop = "Free and open-source desktop application for Windows, macOS, and Linux."
 +++
 
-Regard3D is a free and open source structure-from-motion program that creates 3D models from a series of photographs of an object taken from different viewpoints. It is released under the MIT license (copyright 2015-2018 Roman Hiestand) and, according to the developer's page, is written by a software engineer based in Switzerland. It runs as a desktop application on Windows, macOS (OS X), and Linux, and is distributed via SourceForge.
+Regard3D is a free and open source structure-from-motion program that creates 3D models from a series of photographs of an object taken from different viewpoints. It is released under the MIT license (copyright 2015-2018 Roman Hiestand) and is written by a software engineer based in Switzerland. It runs as a desktop application on Windows, macOS (OS X), and Linux, and is distributed via SourceForge.
 
 The processing pipeline moves through defined stages: creating a project, adding a picture set, computing matches (feature detection with A-KAZE, descriptors with LIOP, descriptor matching and geometric filtering, and track generation requiring a point to be seen in at least three images), triangulation to compute a sparse point cloud and camera poses (via an incremental or global SfM engine), densification into a dense point cloud (using CMVS/PMVS, MVE, or SMVS), and surface reconstruction (using Poisson or FSSR) with optional vertex coloring or texture mapping.
 

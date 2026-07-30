@@ -57,8 +57,8 @@ cons = [
   "Product is oriented toward construction, mining, aggregates, waste, transportation, and survey/engineering, not general-purpose mapping domains",
   "Processing is offered only as a vendor-hosted cloud service on AWS; the trusted sources describe no desktop or self-hosted/on-premise processing option",
   "LiDAR point cloud classification is limited to two categories, Ground and Unclassified, per the LiDAR processing page",
-  "The public API is described as read-only",
-  "No public pricing is disclosed on the trusted sources",
+  "The public API is read-only",
+  "No public pricing is disclosed",
 ]
 typical_workflow = [
   "Fly the site with an RTK-enabled or Propeller PPK-compatible drone and place AeroPoints for ground control",
@@ -106,7 +106,7 @@ classification = "yes"
 annotations = "yes"
 
 [extra.feature_notes]
-image_input = "Vendor docs describe nadir/top-down 'nadir shots' as the standard survey flight imagery."
+image_input = "Nadir/top-down 'nadir shots' as the standard survey flight imagery."
 lidar = "Cloud LiDAR processing service; accepts DJI Zenmuse L1/L2 raw data or pre-processed classified LAS/LAZ from any sensor."
 gcp = "Via Propeller AeroPoints smart GCPs and/or GCPs uploaded as CSV."
 rtk_ppk = "Propeller PPK workflow using RTK/PPK-compatible drones plus AeroPoints."
@@ -118,7 +118,7 @@ mesh_3d = "'Hyper-realistic textured 3D models' from photogrammetry; exportable 
 contours = "Generated in-platform; exported as DXF, Shapefile, or PDF."
 cad_export = "Exports DXF (and TTM surfaces); imports DXF/DWG/LandXML. Note: LandXML is import-only, not export."
 cloud = "Propeller Platform is a cloud/managed processing service; processing is done for the user in the cloud."
-api = "Public read-only API for querying sites/surveys and downloading data; described as a paid/premium feature."
+api = "Public read-only API for querying sites/surveys and downloading data; a paid/premium feature."
 web_viewer = "Browser-based cloud platform to view and share 2D maps and 3D models with stakeholders."
 measurements = "In-viewer measurements of distances, volumes, heights, grades."
 change_detection = "Timeline tool and Surface Comparison tool compare surveys over time / survey-to-design."

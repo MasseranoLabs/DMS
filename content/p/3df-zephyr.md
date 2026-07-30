@@ -41,7 +41,7 @@ key_features = [
   "Ground Control Points alignment and 3D metric measurements of distances, areas and volumes (Professional)",
   "Volume computation of a full mesh or projected on a plane, including hollow volumes such as tunnels or sewers (Professional)",
   "Multispectral camera support with radiometric calibration wizard and DEM/multispectral viewer (Professional)",
-  "Native laser scan support (.fls, .rdbx, .zfs, .dp) with 3DF Scarlet registration bundled and Multi-ICP alignment (Professional; viewer-only in Free/Lite)",
+  "Native laser scan support (.fls,.rdbx,.zfs,.dp) with 3DF Scarlet registration bundled and Multi-ICP alignment (Professional; viewer-only in Free/Lite)",
   "Ground Extraction filter and AI point cloud classification tool (Professional)",
   "Point cloud comparison tool reporting differences between two point clouds (Professional)",
   "Python scripting and XML-based batch processing (Professional)",
@@ -50,7 +50,7 @@ key_features = [
 ]
 pros = [
   "Multiple entry points, from a Free edition (up to 50 photos/frames) through Lite and Professional (perpetual or monthly)",
-  "Accepts photographs, video frames and native laser scan formats (.fls, .rdbx, .zfs, .dp), with 3DF Scarlet registration bundled in Professional",
+  "Accepts photographs, video frames and native laser scan formats (.fls,.rdbx,.zfs,.dp), with 3DF Scarlet registration bundled in Professional",
   "Professional edition covers a full survey toolset: orthophoto/orthomosaic, DEM, contour lines, GCP alignment, measurements, volumes, multispectral, AI classification and Python scripting",
   "Documented drone/UAV and RTK workflows in the tutorial library",
   "Multi-GPU acceleration and a wide range of mesh and point cloud export formats",
@@ -88,7 +88,7 @@ dtm = "yes"
 point_cloud = "yes"
 mesh_3d = "yes"
 contours = "yes"
-tiles_3d = "yes"
+tiles_3d = "unknown"
 gaussian_splatting = "yes"
 cad_export = "yes"
 desktop = "yes"
@@ -106,17 +106,16 @@ classification = "yes"
 annotations = "unknown"
 
 [extra.feature_notes]
-image_input = "Vendor docs describe an 'unordered' image option and reconstruction from images at arbitrary angles; reconstruction showcase describes DJI Mavic 3 RTK nadir (90 deg) flights."
+image_input = "An 'unordered' image option and reconstruction from images at arbitrary angles. DJI Mavic 3 RTK nadir (90 deg) flights."
 multispectral = "Full multispectral camera support with radiometric calibration wizard; multiband datasets supported (agriculture pages and feature comparison)."
-lidar = "Imports native laser scan formats (.fls, .fws, .e57, .rdbx, .zfs, .dp) and exports/aligns point clouds (laser-laser and laser-photogrammetry ICP)."
-video = "Imports movie files (.mpeg, .wmv, .avi, .mp4) and uses video frames for reconstruction."
+lidar = "Imports native laser scan formats (.fls,.fws,.e57,.rdbx,.zfs,.dp) and exports/aligns point clouds (laser-laser and laser-photogrammetry ICP)."
+video = "Imports movie files (.mpeg,.wmv,.avi,.mp4) and uses video frames for reconstruction."
 rtk_ppk = "Docs: images with RTK coordinates are auto-detected from EXIF and camera position accuracy set accordingly; GPS/RTK/PPK import supported."
 accuracy_report = "Control-points tutorial: an error report appears after scaling/georeferencing (Tools > Control points > Show alignment info) with global/local reprojection error and checkpoints; also PDF report of workspace."
 coordinate_systems = "Select coordinate system by name or EPSG code, import custom CRS, auto-detect projection, and georeference/reproject to a projected coordinate system."
 dtm = "Generate DTM option plus AI Ground Extraction filter to isolate ground/non-ground and produce DTMs."
 contours = "Creates and exports DXF contour lines."
-tiles_3d = "Export menu documents tiled mesh for ESRI i3s (.slpk); also LOD formats (kmz, osgb, ive, gltf). No explicit Cesium 3D Tiles."
-gaussian_splatting = "Vendor documentation at 3dflow.net/zephyr-doc/en/GaussianSplatting.html states: \\\"Since version 9.0, 3DF Zephyr also supports a Gaussian Splatting workflow that ties directly within the established photogrammetry pipeline.\\\" It generates splats from sparse/dense clouds, external data, or meshes for view-synthesis visualization. The vendor release page 3dflow.net/3df-zephyr-9-0-has-been-released/ add"
+gaussian_splatting = "Vendor documentation at 3dflow.net/zephyr-doc/en/GaussianSplatting.html states: \"Since version 9.0, 3DF Zephyr also supports a Gaussian Splatting workflow that ties directly within the established photogrammetry pipeline.\" It generates splats from sparse/dense clouds, external data, or meshes for view-synthesis visualization. The vendor release page 3dflow.net/3df-zephyr-9-0-has-been-released/ add"
 cad_export = "Exports DXF (meshes, contour lines, drawing elements) plus DGN and SHP; DWG and LandXML not documented."
 desktop = "3DF Zephyr is desktop software (Free, Lite, Pro editions)."
 api = "Python scripting to automate the workflow and XML-based batch reconstruction; FlowEngine SDK available separately."

@@ -30,7 +30,7 @@ features = [
   { key = "point_cloud", label = "Point cloud",     help = "Dense 3D point cloud" },
   { key = "mesh_3d",     label = "3D mesh",         help = "3D textured mesh model" },
   { key = "contours",    label = "Contours",        help = "Contour lines" },
-  { key = "tiles_3d",    label = "3D tiles",        help = "Tiled / streamable 3D model" },
+  { key = "tiles_3d",    label = "3D tiles",        help = "OGC 3D Tiles output (Cesium tileset.json / b3dm / pnts), not Potree octree or Esri i3s" },
   { key = "gaussian_splatting", label = "Gaussian splatting", help = "Generates or exports 3D Gaussian splats (3DGS)" },
   { key = "cad_export",  label = "CAD export",      help = "Export to CAD formats (DXF / DWG / LandXML)" },
 ]
@@ -40,7 +40,7 @@ name = "Processing & platform"
 features = [
   { key = "desktop",     label = "Desktop",         help = "Runs as a desktop application" },
   { key = "cloud",       label = "Cloud",           help = "Vendor cloud processing" },
-  { key = "self_hosted", label = "Self-hosted",     help = "Self-hosted / on-premise server" },
+  { key = "self_hosted", label = "Self-hosted",     help = "Offers a server you run on your own hardware (not just a local desktop app or SDK)" },
   { key = "api",         label = "API / automation", help = "API or scripting for automation" },
   { key = "gpu",         label = "GPU acceleration", help = "GPU-accelerated processing" },
   { key = "web_viewer",  label = "Web viewer",       help = "Browser-based viewer for sharing results" },

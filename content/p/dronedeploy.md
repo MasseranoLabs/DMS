@@ -59,14 +59,14 @@ pros = [
   "Broad output set from a single cloud workflow: orthomosaics, DSM, DTM, point clouds, 3D models, and contours",
   "Documented ground control support (GCP, RTK, PPK) with automatic post-flight accuracy verification",
   "Multiple export formats (GeoTIFF, LAS, XYZ, OBJ, DXF, SHP, RCP) plus an Export API",
-  "Handles multispectral and thermal imagery and can ingest preprocessed LiDAR .las files",
+  "Handles multispectral and thermal imagery and can ingest preprocessed LiDAR.las files",
   "In-viewer measurement and analysis tools (distance, area, volume, cross sections, classification)",
 ]
 cons = [
   "Some capabilities are gated by plan or add-on (e.g., RCP export limited to Enterprise; advanced plant-health indices via Precision Ag Package)",
   "NDVI requires a multispectral or NIR-capable camera; RGB imagery is limited to the VARI index",
   "Point clouds are not classified by default; classification is generated on demand",
-  "LiDAR support is documented as uploading preprocessed .las point clouds (under 5GB), not native LiDAR data reduction",
+  "LiDAR support is uploading preprocessed.las point clouds (under 5GB), not native LiDAR data reduction",
 ]
 typical_workflow = [
   "Plan and fly an automated drone mission (or capture with supported hardware), optionally placing GCPs and using RTK/PPK",
@@ -118,15 +118,15 @@ image_input = "Captured via Enhanced 3D / Perimeter 3D / Crosshatch flight modes
 multispectral = "Processes multispectral imagery (e.g. MicaSense/Sentera, BGRRE-NIR bands); requires a multispectral camera."
 lidar = "Supports uploading/importing preprocessed LiDAR point clouds (.las, up to 5GB) and offers photogrammetry+LiDAR processing; RCP export is Enterprise-only."
 gcp = "Ground Control Points and independent checkpoints supported."
-rtk_ppk = "Both RTK and PPK correction workflows are documented."
+rtk_ppk = "Both RTK and PPK correction workflows."
 accuracy_report = "Processing Report / Accuracy Report with GCP and checkpoint RMSE and per-checkpoint location error."
 coordinate_systems = "Supports EPSG projections including WGS84 (4326), Web Mercator (3857), and custom State Plane / UTM."
 dtm = "DTM (Digital Terrain Model) available as a layer and as a source for DTM contours."
 point_cloud = "Dense point cloud exports in LAS/XYZ (Individual and Enterprise) and RCP (Enterprise only)."
 mesh_3d = "3D textured mesh exported as OBJ with MTL material and JPG textures."
-gaussian_splatting = "DroneDeploy's own help center article \\\"Gaussian Splats\\\" (help.dronedeploy.com/hc/en-us/articles/36102714208023-Gaussian-Splats) explicitly states: \\\"Splats provide a photorealistic 3D viewing mode, powered by Gaussian Splatting, that makes sites look smooth, clear, and easy to understand during reviews,\\\" and describes first-person W/A/S/D navigation controls for reviewing sites. DroneDeploy's Insid"
-cad_export = "Contours exportable as DXF (and SHP) for AutoCAD / Civil 3D; LandXML export not confirmed on vendor pages."
-cloud = "Cloud-hosted processing; documented as running on AWS and Google Cloud."
+gaussian_splatting = "DroneDeploy's own help center article \"Gaussian Splats\" (help.dronedeploy.com/hc/en-us/articles/36102714208023-Gaussian-Splats) explicitly states: \"Splats provide a photorealistic 3D viewing mode, powered by Gaussian Splatting, that makes sites look smooth, clear, and easy to understand during reviews,\" and describes first-person W/A/S/D navigation controls for reviewing sites. DroneDeploy's Insid"
+cad_export = "Contours exportable as DXF (and SHP) for AutoCAD / Civil 3D; LandXML export not confirmed."
+cloud = "Cloud-hosted processing running on AWS and Google Cloud."
 api = "Open API available for automation/integration."
 web_viewer = "Browser-based viewer for sharing 2D maps and 3D models."
 flight_planning = "Automated drone flight/mission planning via DroneDeploy mobile and web apps."

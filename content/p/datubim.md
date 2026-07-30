@@ -40,7 +40,7 @@ key_features = [
   "Outputs true orthophotos, DSM, DTM, dense point clouds, 3D texture mesh, and contours",
   "Distance, area, volume, and elevation measurements with cut/fill computation",
   "Volume grid/heatmap and cross-section volume reports",
-  "Design vs. pre-construction vs. as-built comparison and deviation detection over time",
+  "Design vs. Pre-construction vs. As-built comparison and deviation detection over time",
   "API for custom integrations and broad file interoperability (DXF, DWG, DGN, LandXML, IFC, LAS, TIF, XML)",
   "Supports all published coordinate systems",
 ]
@@ -52,7 +52,7 @@ pros = [
   "Supports all published coordinate systems and multiple cloud regions (US and Europe/ROW)",
 ]
 cons = [
-  "Purpose-built for heavy civil infrastructure (roads, rail, bridges, earthworks); the site states it is not for vertical construction",
+  "Purpose-built for heavy civil infrastructure (roads, rail, bridges, earthworks). Is not for vertical construction",
   "Requires imagery from at least a 20 megapixel camera with GPS",
   "Pricing is not published; it is quote-based on user licenses and number of images processed",
   "Delivered as a vendor-hosted cloud SaaS (US and Europe/ROW instances); the trusted sources describe no desktop or on-premise deployment",
@@ -103,8 +103,8 @@ classification = "unknown"
 annotations = "yes"
 
 [extra.feature_notes]
-image_input = "DatuBIM is a drone-mapping/photogrammetry product that produces true orthophotos, DSM and DTM from drone flights (top-down/nadir workflow); no explicit 'oblique' capture is documented."
-lidar = "Documented as a supported input/integration: 'Scan the site using drones, ground surveys, or LiDAR' plus laser-scanning integration; DatuBIM itself is a cloud analytics platform, not a LiDAR-only processor."
+image_input = "DatuBIM is a drone-mapping/photogrammetry product that produces true orthophotos, DSM and DTM from drone flights (top-down/nadir workflow); no explicit 'oblique' capture."
+lidar = "A supported input/integration: 'Scan the site using drones, ground surveys, or LiDAR' plus laser-scanning integration; DatuBIM itself is a cloud analytics platform, not a LiDAR-only processor."
 rtk_ppk = "FAQ: 'DatuBIM also supports RTK and PPK images.'"
 coordinate_systems = "Supports all published coordinate systems plus user-defined/local systems, georeferenced outputs."
 orthomosaic = "'True orthophotos' georeferenced to user coordinate systems."
@@ -118,11 +118,11 @@ cloud = "DatuBIM is a cloud-native SaaS; FAQ notes US and Europe/ROW cloud insta
 web_viewer = "Cloud-native SaaS accessed via browser (bim.datumate.com) where users view 3D models/maps, click model areas to see source images, take measurements, and add annotations in the platform; no standalone downloadable viewer implied."
 measurements = "In-viewer distances, areas, volumes, elevations, cut/fill."
 volume = "Excavation/stockpile volume analytics, volume grid and heatmap report, cross-section volume report."
-change_detection = "Multi-temporal comparison ('compare digital twins...from different dates') and Deviation Detection."
+change_detection = "Multi-temporal comparison ('compare digital twins..from different dates') and Deviation Detection."
 annotations = "Georeferenced notes/annotations in the model viewer."
 +++
 
-DatuBIM is a cloud-native SaaS platform from Datumate for infrastructure construction data analytics. The site describes it as purpose-built for heavy civil work such as roads, rail, bridges, and earthworks, and explicitly not for vertical construction. Users scan a site with drones, ground surveys, or LiDAR, and the platform's photogrammetric engine (using Structure from Motion) converts imagery into georeferenced 3D models.
+DatuBIM is a cloud-native SaaS platform from Datumate for infrastructure construction data analytics. It is purpose-built for heavy civil work such as roads, rail, bridges, and earthworks, and explicitly not for vertical construction. Users scan a site with drones, ground surveys, or LiDAR, and the platform's photogrammetric engine (using Structure from Motion) converts imagery into georeferenced 3D models.
 
 Standard mapping outputs include true orthophotos, digital surface models (DSM), digital terrain models (DTM), dense point clouds, 3D texture mesh models, and contours. On top of these, DatuBIM produces construction-analysis outputs including distance, area, volume, and elevation measurements, cut/fill computation, volume grid/heatmap and cross-section volume reports, and design vs. pre-construction vs. as-built comparisons with deviation detection over time.
 

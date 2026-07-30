@@ -10,7 +10,7 @@ country = "United States"
 license = "Proprietary"
 open_source = false
 price_model = "Commercial license"
-price_detail = "Pricing is not published on the reviewed pages. The download page states the software runs in non-restricted mode with a valid license, and that a demo/no-license mode is only partially available and restricted regarding output."
+price_detail = "Pricing is not published. The software runs in non-restricted mode with a valid license; a demo/no-license mode is only partially available and restricted regarding output."
 platforms = [
   "Desktop",
 ]
@@ -43,13 +43,13 @@ pros = [
   "Handles single- and multi-camera aerial frame systems and both low- and high-overlap imagery",
   "Can combine image data with lidar data",
   "Includes quality/accuracy evaluation tools and a project report file",
-  "Described as a long-standing photogrammetry product (stated as over 40 years)",
+  "Long-standing photogrammetry product with a stated 40+ year history",
 ]
 cons = [
-  "Requires a valid commercial license; the no-license demo mode is restricted regarding output (per the download page)",
-  "Pricing is not published on the reviewed pages",
-  "Reviewed sources describe only desktop/office-based processing and do not document cloud, self-hosted, or API deployment",
-  "The reviewed pages do not specify a supported operating system or version number",
+  "Requires a valid commercial license; the no-license demo mode is restricted regarding output",
+  "Pricing is not published",
+  "Desktop/office-based processing only, with no cloud, self-hosted, or API deployment",
+  "No supported operating system or version number is specified",
 ]
 typical_workflow = [
   "Import aerial frame imagery from single- or multi-camera systems",
@@ -99,7 +99,7 @@ annotations = "unknown"
 [extra.feature_notes]
 image_input = "Standard aerial-frame photogrammetry; product page cites 'any aerial frame digital imagery' and aerial/satellite image blocks."
 lidar = "Supports importing, filtering, classifying and editing LiDAR/airborne laser-scanning point clouds and combining image + lidar data (SCOP++, DTMaster, 'LiDAR Box'); it does not capture LiDAR."
-rtk_ppk = "Documented as GNSS/IMU direct georeferencing ('full GNSS and IMU support', UASMaster 'GPS support and high-quality direct-georeferencing', Applanix DG). Confirms GNSS/IMU camera positions rather than using the exact RTK/PPK wording."
+rtk_ppk = "GNSS/IMU direct georeferencing ('full GNSS and IMU support', UASMaster 'GPS support and high-quality direct-georeferencing', Applanix DG). This confirms GNSS/IMU camera positions rather than using the exact RTK/PPK wording."
 accuracy_report = "'Comprehensive project report file' and QA/QC accuracy-evaluation tools; UASMaster quantitative and visual QC."
 coordinate_systems = "Georeferencing via the Inpho Coordinate System database with geoid/datum support; coordinate system carried from Trimble Business Center."
 orthomosaic = "True-orthophoto and classical orthophoto generation (OrthoMaster) and large orthomosaics (OrthoVista)."
@@ -114,8 +114,8 @@ change_detection = "Stereo module (Summit Evolution) supports superimposing vect
 classification = "Automatic classification of raw point clouds into terrain vs off-terrain (LiDAR filtering) in SCOP++ / DTMaster."
 +++
 
-Trimble Inpho is a desktop photogrammetry software suite from Trimble for processing aerial imagery projects. The product page describes it as generating dense point clouds, true orthophotos, and 3D meshes, and states it has over 40 years of history as a photogrammetry solution. It supports any single-camera or multi-camera aerial frame system and handles low- or high-overlap imagery regardless of project size, and can combine image and lidar data.
+Trimble Inpho is a desktop photogrammetry software suite from Trimble for processing aerial imagery projects. It generates dense point clouds, true orthophotos, and 3D meshes, and has over 40 years of history as a photogrammetry solution. It supports any single-camera or multi-camera aerial frame system and handles low- or high-overlap imagery regardless of project size, and can combine image and lidar data.
 
 The suite is organized into modules: MATCH-AT for aerial triangulation; MATCH-3DX and MATCH-T for point cloud generation; OrthoMaster and OrthoVista for orthophoto generation (true and classical orthophotos); DTMaster Stereo and SCOP++ for point cloud editing; and UASMaster for a full UAV and close-range workflow. Users can evaluate the accuracy of imagery and the quality of results using interactive, automatic tools together with a comprehensive project report file.
 
-The related UASMaster module processes data from any UAS with frame-based cameras, using modern computer-vision image matching, flexible camera calibration, direct georeferencing (with Applanix DG), and quantitative and visual quality control, and produces photorealistic 3D meshes and dense point clouds. Stated target applications include city modeling, rural and topographic mapping, and digital twins. Pricing, operating-system requirements, and version details are not provided on the reviewed pages.
+The related UASMaster module processes data from any UAS with frame-based cameras, using modern computer-vision image matching, flexible camera calibration, direct georeferencing (with Applanix DG), and quantitative and visual quality control, and produces photorealistic 3D meshes and dense point clouds. Stated target applications include city modeling, rural and topographic mapping, and digital twins. Pricing, operating-system requirements, and version details are not provided.

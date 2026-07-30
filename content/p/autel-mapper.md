@@ -35,7 +35,7 @@ latest_version = "unknown"
 first_release_year = "unknown"
 official_url = "https://www.autelrobotics.com/productdetail/autel-mapper/"
 key_features = [
-  "2D reconstruction producing orthophoto output (GeoTIFF); the page states it meets a 1:500 mapping precision requirement without GCPs",
+  "2D reconstruction producing orthophoto output (GeoTIFF). Meets a 1:500 mapping precision requirement without GCPs",
   "3D reconstruction with selectable quality (high, medium, low), outputting B3DM, OSGB, OBJ, and PLY",
   "Aerial triangulation supporting both rolling shutter and global shutter cameras, with block processing for large datasets (output XML)",
   "Real-time 2D stitching during flight from the remote controller's streamed images to produce orthophotos on site",
@@ -54,7 +54,7 @@ pros = [
   "Stated centimeter-level (1:500) mapping accuracy with compatible Autel hardware",
 ]
 cons = [
-  "The specifications list only Windows 10 or later (64-bit) as the operating system; no other OS is listed",
+  "Only Windows 10 or later (64-bit) as the operating system; no other OS is listed",
   "Recommended hardware is demanding (e.g. NVIDIA RTX 2080 Ti or higher, 32GB RAM or higher)",
   "No price is published on the official product page",
   "Some capabilities are tied to Autel drones and compatible hardware (e.g. accuracy figures cited for the EVO II Pro RTK V3)",
@@ -114,11 +114,11 @@ point_cloud = "Dense point cloud output in PNTS, LAS, XYZ."
 mesh_3d = "3D model output in OBJ, PLY, OSGB, B3DM (textured 3D reconstruction)."
 tiles_3d = "Output formats include B3DM (3D Tiles), PNTS (tiled point cloud), and OSGB (tiled model)."
 desktop = "Windows 10+ (64-bit) desktop application with local processing."
-cloud = "Described as offering cloud processing ('cloud or local processing', 'Cloud Ready')."
+cloud = "Offers cloud processing ('cloud or local processing', 'Cloud Ready')."
 gpu = "Not called 'GPU acceleration' explicitly, but system requirements mandate a discrete NVIDIA GeForce GPU (GTX 1070 min / RTX 2080 Ti recommended) with 6-8GB VRAM for the deep-learning reconstruction processing."
 +++
 
-Autel Mapper is a 2D and 3D reconstruction (photogrammetry) software from Autel Robotics that processes drone imagery into mapping and modeling deliverables. According to its specifications, it runs on Windows 10 or later (64-bit) and supports both local and cloud processing. Its stated type is '2D/3D Reconstruction.'
+Autel Mapper is a 2D and 3D reconstruction (photogrammetry) software from Autel Robotics that processes drone imagery into mapping and modeling deliverables. It runs on Windows 10 or later (64-bit) and supports both local and cloud processing. Its type is 2D/3D reconstruction.
 
 For 2D output, the software generates orthophotos in GeoTIFF, and its Quick Stitching mode produces DOM, DSM, and 2.5D visualization, including an on-the-fly stitching option. For 3D output, reconstruction quality can be set to high, medium, or low, producing models in B3DM, OSGB, OBJ, and PLY, alongside dense point clouds in PNTS, LAS, and XYZ. Aerial triangulation (output as XML) supports both rolling shutter and global shutter cameras and uses intelligent block processing for large datasets. Rebuild optimization includes KML import, model reconstruction processing, camera parameters, image POS data management, and Ground Control Point management.
 

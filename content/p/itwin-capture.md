@@ -9,8 +9,8 @@ developer = "Bentley Systems"
 country = "United States"
 license = "Proprietary"
 open_source = false
-price_model = "Subscription (perpetual also referenced); pricing not disclosed on the sources"
-price_detail = "The iTwin Capture Modeler page references subscription and perpetual license models, and processing in the cloud via a subscription to iTwin Capture Cloud Services. No specific prices are published on the reviewed pages."
+price_model = "Subscription (perpetual also available); pricing not disclosed"
+price_detail = "Subscription and perpetual license models are offered, with cloud processing via a subscription to iTwin Capture Cloud Services. No specific prices are published."
 platforms = [
   "Windows",
 ]
@@ -60,9 +60,9 @@ pros = [
   "Provides an SDK and iTwin Platform reality-modeling APIs for automation",
 ]
 cons = [
-  "Desktop application requires Microsoft Windows (Windows 10 64-bit stated); no other desktop OS confirmed on the sources",
+  "Desktop application requires Microsoft Windows (Windows 10 64-bit stated); no other desktop OS confirmed",
   "Some advanced functions (machine learning, automatic color equalization, ground and feature extraction) require an NVIDIA graphics card",
-  "Public pricing is not disclosed on the reviewed pages",
+  "Public pricing is not disclosed",
   "AI detector quality depends on how similar the input data is to each detector's training dataset (stated on the AI Detectors page)",
 ]
 typical_workflow = [
@@ -97,7 +97,7 @@ gaussian_splatting = "yes"
 cad_export = "yes"
 desktop = "yes"
 cloud = "yes"
-self_hosted = "yes"
+self_hosted = "unknown"
 api = "yes"
 gpu = "yes"
 web_viewer = "yes"
@@ -110,7 +110,7 @@ classification = "yes"
 annotations = "unknown"
 
 [extra.feature_notes]
-image_input = "iTwin Capture Engine calibrates all images by automatically identifying the relative position and orientation of each photo, i.e. reconstructs from images at any position/angle using any digital camera."
+image_input = "ITwin Capture Engine calibrates all images by automatically identifying the relative position and orientation of each photo, i.e. reconstructs from images at any position/angle using any digital camera."
 thermal = "Input supports RGB and thermal imagery; produces RGB and thermal orthophotos (iTwin Capture Engine page)."
 lidar = "Accepts lidar point clouds in LAS, LAZ, OPC, and POD formats."
 video = "Datasheet lists video as an importable reality data input type alongside image and point cloud."
@@ -118,13 +118,12 @@ gcp = "Datasheet lists ground control point import, recording, and automatic det
 accuracy_report = "Datasheet: generate quality reports and review quality metrics in 3D; Engine produces aerotriangulation reports."
 coordinate_systems = "Georeferencing / geo-registration to coordinate systems is a listed capability."
 dsm = "True orthophoto / 2.5D digital surface model export (TIFF/GEOTIFF/KML) per datasheet."
-dtm = "iTwin Capture Engine/WorkSuite pages list DEM/DSM and DTM (terrain models) output."
+dtm = "ITwin Capture Engine/WorkSuite. DEM/DSM and DTM (terrain models) output."
 tiles_3d = "Mesh export formats include 3MX, 3SM, I3S, and Cesium 3D Tiles (tiled/streamable formats)."
-gaussian_splatting = "The vendor-owned page https://www.bentley.com/software/itwin-capture-modeler/ (Bentley's official iTwin Capture Modeler product page) explicitly states the iTwin Capture Engine produces \\\"Gaussian splats\\\" as an output, twice: in the overview (\\\"transforms your imagery and lidar point clouds into precise digital assets - including 3D meshes, Gaussian splats, orthomosaics, digital surface models, and"
-cad_export = "Exports to Bentley DGN (a CAD format) among mesh formats; no explicit DXF/DWG/LandXML confirmed on vendor pages."
-desktop = "iTwin Capture Modeler / Modeler Flex are desktop applications for local processing."
+gaussian_splatting = "The vendor-owned page https://www.bentley.com/software/itwin-capture-modeler/ (Bentley's official iTwin Capture Modeler product page) explicitly states the iTwin Capture Engine produces \"Gaussian splats\" as an output, twice: in the overview (\"transforms your imagery and lidar point clouds into precise digital assets - including 3D meshes, Gaussian splats, orthomosaics, digital surface models, and"
+cad_export = "Exports to Bentley DGN (a CAD format) among mesh formats; no explicit DXF/DWG/LandXML confirmed."
+desktop = "ITwin Capture Modeler / Modeler Flex are desktop applications for local processing."
 cloud = "Cloud processing available via the iTwin Capture Cloud Services subscription."
-self_hosted = "Engine runs locally on your own Windows hardware with parallel/cluster processing (local processing for speed and security)."
 api = "Datasheet lists an SDK; a Reality Modeling API is available on the iTwin developer platform to convert photos into 3D reality meshes."
 gpu = "GPU acceleration used for processing; NVIDIA GPU required for advanced ML functions; parallel computing with a powerful GPU."
 web_viewer = "Reality meshes are web-ready for navigation in iTwin web applications; image collections shareable as mapping runs for web-based photo navigation in the connected reality data environment."

@@ -108,10 +108,10 @@ annotations = "yes"
 
 [extra.feature_notes]
 image_input = "Platform processes geotagged JPG drone mapping imagery into RGB orthomosaics; nadir top-down drone mapping is the core documented workflow."
-multispectral = "Multispectral orthomosaic processing is documented as a Pro+ add-on on the pricing/features page."
-thermal = "Documented as thermal orthomosaic processing from thermal drone imagery."
+multispectral = "Multispectral orthomosaic processing is a Pro+ add-on on the pricing/features page."
+thermal = "Thermal orthomosaic processing from thermal drone imagery."
 gcp = "GCP processing documented, including a built-in GCP Editor to input GCP coordinates and correct positional errors."
-rtk_ppk = "The RTK blog page states GeoNadir supports all methods of relative and absolute accuracy for uploaded drone data, including importing RTK images and using the GCP Editor."
+rtk_ppk = "GeoNadir supports all methods of relative and absolute accuracy for uploaded drone data, including importing RTK images and using the GCP Editor."
 cloud = "Hosted cloud platform; data stored on AWS cloud servers and processed in the cloud."
 web_viewer = "Browser-based platform to view and share projects; TMS link output and shareable projects for viewing/commenting."
 measurements = "In-viewer tools to measure areas, calculate heights, terrain profiles and slope."
@@ -121,8 +121,8 @@ change_detection = "Detect change and compare data from multiple dates over time
 annotations = "Drawing tools plus magic-wand AI polygons to draw on maps and share insights."
 +++
 
-GeoNadir is a cloud-native geospatial platform developed by the Australian company GeoNadir for storing, processing, and analyzing drone and satellite mapping data, with a stated focus on environmental teams and ecosystem monitoring. It processes uploaded drone imagery (RGB, thermal, and multispectral) into orthomosaics and digital elevation models (DSM and DTM), and incorporates Sentinel-2 satellite imagery alongside drone data. The vendor describes the product as running entirely in the cloud with no local software installation required.
+GeoNadir is a cloud-native geospatial platform developed by the Australian company GeoNadir for storing, processing, and analyzing drone and satellite mapping data, with a stated focus on environmental teams and ecosystem monitoring. It processes uploaded drone imagery (RGB, thermal, and multispectral) into orthomosaics and digital elevation models (DSM and DTM), and incorporates Sentinel-2 satellite imagery alongside drone data. The product runs entirely in the cloud with no local software installation required.
 
 The platform provides analysis tools including volume and height calculation, area and distance measurement, multi-temporal change detection, and NDVI and other spectral vegetation indices. It includes drawing tools, AI-assisted (Magic wand) polygon creation, a searchable map-based data library, and reporting through on-platform graphs, charts, and vector and dataset statistics. Collaboration features cover real-time team access, sharing, and commenting, and outputs can be exported as GeoTIFF, CSV, or vector data, or streamed to external GIS applications via TMS links.
 
-GeoNadir is offered on a freemium model: a free Essentials tier (100 GB storage, 500 images per dataset, one user, one project), a Professional tier ($84/month USD) that adds thermal orthomosaics, advanced analysis, and spectral indices, a customizable Pro+ tier with add-ons such as multispectral and GCP processing, and custom Enterprise and Mining plans. The vendor states that the platform is focused on nadir imagery and does not provide 3D models, distinguishing it from photogrammetry tools that generate textured meshes.
+GeoNadir is offered on a freemium model: a free Essentials tier (100 GB storage, 500 images per dataset, one user, one project), a Professional tier ($84/month USD) that adds thermal orthomosaics, advanced analysis, and spectral indices, a customizable Pro+ tier with add-ons such as multispectral and GCP processing, and custom Enterprise and Mining plans. The platform is focused on nadir imagery and does not provide 3D models, distinguishing it from photogrammetry tools that generate textured meshes.

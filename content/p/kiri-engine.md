@@ -10,7 +10,7 @@ country = "unknown"
 license = "Proprietary (freemium)"
 open_source = false
 price_model = "Freemium with subscription (free tier plus paid Pro plan); separate credit-based pricing for the API"
-price_detail = "Free (Basic) plan: up to 150 photos per scan, 2 GB max file size, unlimited scans and exports, no ads. Pro plan: $17.99/month or $79.99/year, adding Featureless Object Scan, Mesh-Inclusive 3DGS, PBR material maps, quad-mesh retopology, auto-rigging, 500 photos per scan and 5 GB max. API: credit system priced at $1 per credit, 1 credit per call, minimum recharge 500 credits, 10 free credits for new users, described as in a testing phase."
+price_detail = "Free (Basic) plan: up to 150 photos per scan, 2 GB max file size, unlimited scans and exports, no ads. Pro plan: $17.99/month or $79.99/year, adding Featureless Object Scan, Mesh-Inclusive 3DGS, PBR material maps, quad-mesh retopology, auto-rigging, 500 photos per scan and 5 GB max. API: credit system priced at $1 per credit, 1 credit per call, minimum recharge 500 credits, 10 free credits for new users; in a testing phase."
 platforms = [
   "iOS / iPadOS",
   "Android",
@@ -57,7 +57,7 @@ pros = [
 cons = [
   "Several capabilities (Featureless Object Scan, Mesh-Inclusive 3DGS, PBR maps, quad retopology, auto-rigging) require the paid Pro plan",
   "Free plan is capped at 150 photos per scan and a 2 GB file size (per the pricing page)",
-  "The API is described on the vendor site as being in a testing phase with pricing subject to change",
+  "The API on the vendor site as being in a testing phase with pricing subject to change",
   "Scan processing is cloud-based (uploads required), and LiDAR scanning requires a compatible iOS device",
 ]
 typical_workflow = [
@@ -109,7 +109,7 @@ classification = "unknown"
 annotations = "unknown"
 
 [extra.feature_notes]
-image_input = "Confirmed via the special-case rule: the 3D Gaussian Splatting page describes reconstruction from unstructured/unordered image sets. This is object/scene capture, not aerial nadir imagery per se."
+image_input = "Confirmed via the special-case rule:. Reconstruction from unstructured/unordered image sets. This is object/scene capture, not aerial nadir imagery per se."
 lidar = "Uses the built-in LiDAR sensor of iPhone/iPad Pro devices for on-device Room Scan and Object Capture; mobile scanning, not aerial LiDAR point clouds."
 gaussian_splatting = "Native 3DGS generation with PLY export; optional 3DGS-to-mesh conversion and 3DGS masking/editing tools."
 cloud = "Server-side cloud processing for Photo Scan and AI enhancement of LiDAR data."
@@ -122,4 +122,4 @@ KIRI Engine is a 3D scanning application developed by KIRI Innovations and avail
 
 Outputs center on textured 3D meshes and point clouds, with export to OBJ, FBX, STL, GLB, GLTF, USDZ, PLY, and XYZ. Higher-end outputs on the Pro plan include PBR material maps, quad-mesh retopology with adjustable polygon counts and textures up to 8K, and automatic rigging. The product is offered under a freemium model: a free Basic plan (up to 150 photos per scan, 2 GB file size, unlimited scans and exports) and a Pro plan at $17.99/month or $79.99/year that raises limits and unlocks the advanced scan and mesh features.
 
-KIRI Engine also provides a RESTful cloud API (documented at docs.kiriengine.app) that lets developers create and retrieve scan tasks programmatically for Photo Scan, Featureless Object Scan, and 3DGS-with-mesh. The API uses a credit system priced at $1 per credit with a 500-credit minimum recharge and 10 free credits for new users, and the vendor notes it is in a testing phase. The product is oriented toward object and scene capture for uses such as game and 3D asset creation, 3D printing, and research/spatial documentation rather than aerial or survey mapping; no drone/aerial mapping, orthomosaic, DSM/DTM, GCP, RTK/PPK, multispectral, or thermal capabilities are described on the site.
+KIRI Engine also provides a RESTful cloud API (docs.kiriengine.app) that lets developers create and retrieve scan tasks programmatically for Photo Scan, Featureless Object Scan, and 3DGS-with-mesh. The API uses a credit system priced at $1 per credit with a 500-credit minimum recharge and 10 free credits for new users, and it is in a testing phase. The product is oriented toward object and scene capture for uses such as game and 3D asset creation, 3D printing, and research/spatial documentation rather than aerial or survey mapping; no drone/aerial mapping, orthomosaic, DSM/DTM, GCP, RTK/PPK, multispectral, or thermal capabilities are available.

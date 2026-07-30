@@ -103,12 +103,12 @@ classification = "unknown"
 annotations = "yes"
 
 [extra.feature_notes]
-image_input = "General photogrammetry/object capture is documented as capturing a subject from different angles (walking around at different angles); not a drone-specific nadir/oblique flight spec."
+image_input = "General photogrammetry/object capture is capturing a subject from different angles (walking around at different angles); not a drone-specific nadir/oblique flight spec."
 lidar = "LiDAR 3D scanner is a core Polycam capture mode (requires a device with a LiDAR sensor); produces LiDAR 3D models/point clouds."
 video = "Accepts video input for reconstruction (MP4, MOV, AVI, M4V)."
 point_cloud = "Point cloud processing and LAS/PLY point cloud export documented; point cloud export is on Business/Enterprise tiers."
 mesh_3d = "Textured 3D mesh with photorealistic textures is the standard output."
-gaussian_splatting = "The vendor-owned page https://poly.cam/gaussian-splatting explicitly states Polycam generates, edits, exports, and views 3D Gaussian Splats. Quoted text includes \\\"You can create a Gaussian Splatting reconstruction right on this page,\\\" a \\\"Fully featured suite of splat editing tools,\\\" ability to download \\\"mesh for any Gaussian Splat,\\\" and a library to view existing splats. Note: WebSearch budget was"
+gaussian_splatting = "The vendor-owned page https://poly.cam/gaussian-splatting explicitly states Polycam generates, edits, exports, and views 3D Gaussian Splats. Quoted text includes \"You can create a Gaussian Splatting reconstruction right on this page,\" a \"Fully featured suite of splat editing tools,\" ability to download \"mesh for any Gaussian Splat,\" and a library to view existing splats. Note: WebSearch budget was"
 cad_export = "Exports DXF and is AutoCAD/CAD/BIM compatible (DXF listed among drone photogrammetry export formats)."
 cloud = "Cloud/web-hosted processing; upload drone data to the web and process with one click."
 web_viewer = "Browser-based collaborative viewer/sharing of 3D models across devices."
@@ -120,4 +120,4 @@ Polycam is a reality-capture product from the company Polycam that creates 3D mo
 
 For drone mapping, Polycam accepts photos or video from most commercial-grade drones in PNG, JPG, MP4, MOV, AVI, and M4V formats. Data is uploaded to the web and processed with a 1-click, cloud-based workflow that requires no downloaded software. The resulting 3D model can be viewed, measured, and edited, and the vendor positions this for uses such as construction site monitoring and surveying.
 
-Outputs and features vary by subscription tier. The free tier exports only GLTF; paid tiers unlock mesh formats (OBJ, FBX, DAE, STL, USDZ), point cloud formats (PLY, LAS, DXF, and geo-referenced LAS), 2D & 3D floor plans, and advanced measure tools. Exported files are documented as compatible with tools including SketchUp, AutoCAD, Revit, Blender, Unity, and Unreal Engine. A capture API is referenced on the pricing page under a contact request.
+Outputs and features vary by subscription tier. The free tier exports only GLTF; paid tiers unlock mesh formats (OBJ, FBX, DAE, STL, USDZ), point cloud formats (PLY, LAS, DXF, and geo-referenced LAS), 2D & 3D floor plans, and advanced measure tools. Exported files are compatible with tools including SketchUp, AutoCAD, Revit, Blender, Unity, and Unreal Engine. A capture API is offered under a contact-request tier.

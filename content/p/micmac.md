@@ -13,12 +13,12 @@ price_model = "Free / open source"
 price_detail = "Free and open source, distributed under the CeCILL-B licence since 2007; source code available on GitHub."
 platforms = [
   "Windows",
-  "macOS",
+  "MacOS",
   "Linux",
   "Raspberry Pi",
 ]
 deployment = [
-  "Local desktop install (pre-compiled binaries or self-compiled from source)",
+  "Local desktop install (pre-compiled binaries or self-compiled)",
   "Docker image",
 ]
 primary_outputs = [
@@ -33,7 +33,7 @@ target_use_cases = [
   "Environmental & forestry",
   "Research & education",
 ]
-latest_version = "unknown"
+latest_version = "Unknown"
 first_release_year = "2007"
 official_url = "https://micmac.ensg.eu"
 key_features = [
@@ -57,7 +57,7 @@ pros = [
 cons = [
   "Primary interface is the command line (mm3d); a GUI is only available in Qt builds or via the third-party AperoDeDenis application",
   "Visualization of 3D products relies on external tools such as MeshLab or CloudCompare",
-  "The official documentation wiki is noted on the homepage as still under construction",
+  "The official documentation wiki is still under construction",
   "Several listed commands are marked as in development or early work in progress (e.g. Digeo, Martini, SateLib, Arsenic)",
 ]
 typical_workflow = [
@@ -108,8 +108,8 @@ classification = "unknown"
 annotations = "unknown"
 
 [extra.feature_notes]
-image_input = "Presentation page states MicMac handles aerial and satellite acquisitions of cities and natural areas; Historical_Orthoimage tutorial processes aerial images into DEM and orthoimages."
-video = "Video input supported via DIV (video development using ffmpeg) and VV (3D model from video, described as experimental/'just for fun')."
+image_input = "MicMac handles aerial and satellite acquisitions of cities and natural areas; Historical_Orthoimage tutorial processes aerial images into DEM and orthoimages."
+video = "Video input supported via DIV (video development using ffmpeg) and VV (3D model from video, an experimental / 'just for fun' tool)."
 gcp = "Multiple documented GCP tools: GCPBascule, GCPConvert, GCPCtrl, SaisieAppuisInit/Predic, Aspro (init orientation from GCP)."
 accuracy_report = "Documented via GCPCtrl 'Control accuracy with GCP' plus bundle-adjustment residuals/covariance analysis; output is command-line/statistics rather than a formatted PDF report."
 coordinate_systems = "Georeferencing to local/global/absolute coordinate systems; ChgSysCo changes coordinate system, dedicated Coordinates Systems doc page, and PROJ dependency for CRS handling."
