@@ -345,14 +345,25 @@ a.warn-flag:hover { text-decoration: none; opacity: .8; }
 .matrix-table thead .matrix-feature-head { z-index: 4; background: var(--surface-2); }
 .matrix-table tbody tr:hover .matrix-feature { background: color-mix(in srgb, var(--brand) 6%, var(--bg-elev)); }
 
-/* Sticky table headers on normal page scroll. The page scrolls as usual; each
-   table's header row pins just below the sticky site header. On wide screens the
-   table fits, so its wrapper is set to overflow:visible and no longer traps the
-   sticky context; smaller screens keep the horizontal scroll wrapper. */
-.cmp-table thead th { top: 64px; z-index: 2; }
-.matrix-table thead th { top: 64px; z-index: 3; }
+/* Sticky table headers on normal page scroll. On wide screens the table fits, so
+   its wrapper is set to overflow:visible: the page becomes the sticky context and
+   the header pins 64px down, just below the sticky site header.
+
+   On smaller screens the wrapper keeps overflow-x:auto for horizontal column
+   scrolling, which makes it a scroll container that never scrolls vertically. A
+   64px top offset there would shift the sticky header DOWN 64px and cover the
+   first rows, so narrow screens keep top:0 (header sits normally and scrolls with
+   the page). The 64px offset is scoped to the wide breakpoints only. */
+.cmp-table thead th { z-index: 2; }
+.matrix-table thead th { z-index: 3; }
 .matrix-table thead .matrix-feature-head { z-index: 5; }
-@media (min-width: 1000px) { #compare .table-scroll { overflow: visible; } }
-@media (min-width: 1200px) { #features .table-scroll { overflow: visible; } }
+@media (min-width: 1000px) {
+  #compare .table-scroll { overflow: visible; }
+  #compare .cmp-table thead th { top: 64px; }
+}
+@media (min-width: 1200px) {
+  #features .table-scroll { overflow: visible; }
+  #features .matrix-table thead th { top: 64px; }
+}
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
