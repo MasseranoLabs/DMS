@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Drone Mapping Software">
+  <defs>
+    <linearGradient id="fvGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#fvGrad)"/>
+  <!-- quadcopter, top-down (simplified for small sizes) -->
+  <g stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" fill="none">
+    <path d="M32 32 L19 19 M32 32 L45 19 M32 32 L19 45 M32 32 L45 45"/>
+    <circle cx="19" cy="19" r="6.5"/>
+    <circle cx="45" cy="19" r="6.5"/>
+    <circle cx="19" cy="45" r="6.5"/>
+    <circle cx="45" cy="45" r="6.5"/>
+  </g>
+  <circle cx="32" cy="32" r="7" fill="#ffffff"/>
+  <circle cx="32" cy="32" r="3.2" fill="#2dd4bf"/>
+</svg>

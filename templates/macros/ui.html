@@ -1,0 +1,45 @@
+{# Feature-matrix cell. Dot only when a source confirms support; cross only when a
+   source explicitly states it is NOT supported; otherwise question mark (no info
+   found in sources, which is not a claim of absence). #}
+{% macro feature_cell(value, label) %}
+  {%- if value == "yes" or value == true -%}
+    <span class="fcell fcell-yes" title="{{ label }}: Supported (confirmed in sources)" aria-label="{{ label }}: Supported">●</span>
+  {%- elif value == "no" -%}
+    <span class="fcell fcell-no" title="{{ label }}: Not supported (stated in sources)" aria-label="{{ label }}: Not supported">✕</span>
+  {%- else -%}
+    <span class="fcell fcell-unknown" title="{{ label }}: Not documented in sources" aria-label="{{ label }}: Not documented">?</span>
+  {%- endif -%}
+{% endmacro feature_cell %}
+
+{# A definition-list style spec row; only renders when value is non-empty #}
+{% macro spec_row(label, value) %}
+  {%- if value and value != "" and value != "Unknown" -%}
+  <div class="spec-row">
+    <dt>{{ label }}</dt>
+    <dd>{{ value }}</dd>
+  </div>
+  {%- elif value == "Unknown" -%}
+  <div class="spec-row spec-unknown">
+    <dt>{{ label }}</dt>
+    <dd>Not documented</dd>
+  </div>
+  {%- endif -%}
+{% endmacro spec_row %}
+
+{# Render an array as a list of pill tags #}
+{% macro tags(items) %}
+  {%- if items -%}
+  <ul class="taglist">
+    {%- for item in items %}<li class="tag">{{ item }}</li>{% endfor -%}
+  </ul>
+  {%- endif -%}
+{% endmacro tags %}
+
+{# License badge with open-source styling #}
+{% macro license_badge(license, open_source) %}
+  {%- if open_source -%}
+    <span class="badge badge-open" title="Open source">◆ {{ license }}</span>
+  {%- else -%}
+    <span class="badge badge-proprietary" title="Proprietary">{{ license }}</span>
+  {%- endif -%}
+{% endmacro license_badge %}

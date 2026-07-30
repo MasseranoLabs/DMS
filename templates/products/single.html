@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+
+{% block structured_data %}
+{% set e = page.extra %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": {{ page.title | json_encode | safe }},
+  "applicationCategory": "Drone mapping / photogrammetry software",
+  "operatingSystem": {{ e.platforms | default(value=[]) | join(sep=", ") | json_encode | safe }},
+  "description": {{ e.summary | default(value="") | json_encode | safe }},
+  "url": "{{ page.permalink | safe }}"
+  {%- if e.developer %}, "author": { "@type": "Organization", "name": {{ e.developer | json_encode | safe }} }{% endif %}
+  {%- if e.official_url %}, "sameAs": {{ e.official_url | json_encode | safe }}{% endif %}
+}
+</script>
+{% endblock structured_data %}
+
+{% block content %}
+{% set e = page.extra %}
+{% set fdata = load_data(path="data/features.toml") %}
+<article class="product">
+  <div class="product-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="{{ get_url(path='@/_index.md') | safe }}">Home</a> ›
+        <a href="{{ get_url(path='@/p/_index.md') | safe }}">Software</a> ›
+        <span>{{ page.title }}</span>
+      </nav>
+      <h1 class="product-title">{{ page.title }}{% if e.warning %} <span class="warn-flag" title="Warning" aria-label="Warning">⚠</span>{% endif %}</h1>
+      {% if e.summary %}<p class="product-summary">{{ e.summary }}</p>{% endif %}
+      <div class="product-badges">
+        {{ ui::license_badge(license=e.license | default(value="Unknown"), open_source=e.open_source | default(value=false)) }}
+        {% if e.price_model %}<span class="badge badge-price">{{ e.price_model }}</span>{% endif %}
+        {% if e.developer %}<span class="badge badge-plain">by {{ e.developer }}</span>{% endif %}
+      </div>
+      {% if e.warning %}
+      <div class="warning-banner" role="alert">
+        <span class="warning-icon" aria-hidden="true">⚠</span>
+        <p> {{ e.warning }}</p>
+      </div>
+      {% endif %}
+      {% if e.official_url %}
+      <div class="product-actions">
+        <a class="btn btn-primary" href="{{ e.official_url | safe }}" rel="nofollow noopener" target="_blank">Official site ↗</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="container product-body">
+    <div class="product-main">
+      {% if page.content %}
+      <section class="prod-section">
+        <h2>Overview</h2>
+        <div class="prose">
+          {{ page.content | safe }}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if e.key_features %}
+      <section class="prod-section">
+        <h2>Key features</h2>
+        <ul class="feature-list">
+          {% for f in e.key_features %}<li>{{ f }}</li>{% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+
+      {% if e.pros or e.cons %}
+      <section class="prod-section">
+        <h2>Pros &amp; cons</h2>
+        <div class="proscons">
+          {% if e.pros %}<div class="pros"><h3>Strengths</h3><ul>{% for p in e.pros %}<li>{{ p }}</li>{% endfor %}</ul></div>{% endif %}
+          {% if e.cons %}<div class="cons"><h3>Trade-offs</h3><ul>{% for c in e.cons %}<li>{{ c }}</li>{% endfor %}</ul></div>{% endif %}
+        </div>
+      </section>
+      {% endif %}
+
+      {% if e.typical_workflow %}
+      <section class="prod-section">
+        <h2>Typical workflow</h2>
+        <ol class="workflow">
+          {% for step in e.typical_workflow %}<li>{{ step }}</li>{% endfor %}
+        </ol>
+      </section>
+      {% endif %}
+
+      <section class="prod-section">
+        <h2>Capabilities</h2>
+        <div class="cap-groups">
+          {% for g in fdata.groups %}
+          <div class="cap-group">
+            <h3>{{ g.name }}</h3>
+            <ul class="cap-list">
+              {% for f in g.features %}
+              {% set v = e.features[f.key] | default(value="unknown") %}
+              <li class="cap-item cap-{{ v }}" title="{{ f.help }}">
+                {{ ui::feature_cell(value=v, label=f.label) }}
+                <span class="cap-label">{{ f.label }}</span>
+                {% if e.feature_notes and e.feature_notes[f.key] %}<span class="cap-note">{{ e.feature_notes[f.key] }}</span>{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+
+    <aside class="product-aside">
+      <div class="spec-card">
+        <h2>At a glance</h2>
+        <dl class="spec-list">
+          {{ ui::spec_row(label="Developer", value=e.developer | default(value="")) }}
+          {{ ui::spec_row(label="Country", value=e.country | default(value="")) }}
+          {{ ui::spec_row(label="License", value=e.license | default(value="")) }}
+          {{ ui::spec_row(label="Pricing", value=e.price_model | default(value="")) }}
+          {% if e.price_detail and e.price_detail != "Unknown" %}{{ ui::spec_row(label="Price detail", value=e.price_detail) }}{% endif %}
+          {{ ui::spec_row(label="Latest version", value=e.latest_version | default(value="")) }}
+          {{ ui::spec_row(label="First released", value=e.first_release_year | default(value="")) }}
+        </dl>
+
+        {% if e.platforms %}<div class="spec-block"><h3>Platforms</h3>{{ ui::tags(items=e.platforms) }}</div>{% endif %}
+        {% if e.deployment %}<div class="spec-block"><h3>Deployment</h3>{{ ui::tags(items=e.deployment) }}</div>{% endif %}
+        {% if e.primary_outputs %}<div class="spec-block"><h3>Primary outputs</h3>{{ ui::tags(items=e.primary_outputs) }}</div>{% endif %}
+        {% if e.target_use_cases %}<div class="spec-block"><h3>Common uses</h3>{{ ui::tags(items=e.target_use_cases) }}</div>{% endif %}
+      </div>
+
+      {% if e.sources %}
+      <div class="spec-card">
+        <h2>Sources</h2>
+        <ul class="sources-list">
+          {% for s in e.sources %}<li><a href="{{ s | safe }}" rel="nofollow noopener" target="_blank">{{ s | replace(from="https://", to="") | replace(from="http://", to="") | truncate(length=42) }} ↗</a></li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </aside>
+  </div>
+
+  <div class="container product-foot">
+    <a class="back-link" href="{{ get_url(path='@/_index.md') | safe }}#compare">← Back to the comparison</a>
+  </div>
+</article>
+{% endblock content %}

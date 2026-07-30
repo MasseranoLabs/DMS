@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+
+{% block structured_data %}
+{% set products_section = get_section(path="p/_index.md") %}
+{% set products = products_section.pages %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Drone Mapping Software Comparison",
+  "description": {{ config.description | json_encode | safe }},
+  "itemListElement": [
+    {% for p in products %}{
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": {{ p.title | json_encode | safe }},
+        "applicationCategory": "Drone mapping / photogrammetry software",
+        "url": "{{ p.permalink | safe }}"
+        {%- if p.extra.developer %}, "author": { "@type": "Organization", "name": {{ p.extra.developer | json_encode | safe }} }{% endif %}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endblock structured_data %}
+
+{% block content %}
+{% set products_section = get_section(path="p/_index.md") %}
+{% set products = products_section.pages %}
+{% set fdata = load_data(path="data/features.toml") %}
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="hero-eyebrow">Drone mapping &amp; photogrammetry software directory</p>
+    <h1 class="hero-title">The Ultimate Guide to<br><span class="grad">Drone Mapping Software</span></h1>
+    <p class="hero-sub">Find the right software with our up-to-date catalog of tools that turn drone imagery into orthomosaics, elevation models and 3D reconstructions.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#compare">Compare software</a>
+      <a class="btn btn-ghost" href="#features">See the feature matrix</a>
+    </div>
+    <dl class="hero-stats">
+      <div><dt>Products indexed</dt><dd>{{ products | length }}</dd></div>
+      <div><dt>Features compared</dt><dd>{% set_global fcount = 0 %}{% for g in fdata.groups %}{% set glen = g.features | length %}{% set_global fcount = fcount + glen %}{% endfor %}{{ fcount }}</dd></div>
+      <div></div>
+    </dl>
+  </div>
+</section>
+
+<section id="compare" class="section">
+  <div class="container-wide">
+    <div class="section-head">
+      <h2>Compare at a glance</h2>
+      <p>Sortable overview of every package. Click a column header to sort; type to filter. Follow a name for the full profile.</p>
+    </div>
+
+    <div class="table-tools">
+      <input type="search" id="tableFilter" class="filter-input" placeholder="Filter software (name, license, use case…)" aria-label="Filter software table" data-target="compareTable">
+    </div>
+
+    <div class="table-scroll">
+      <table class="cmp-table sortable" id="compareTable">
+        <thead>
+          <tr>
+            <th scope="col" data-sort="text" aria-sort="none">Software</th>
+            <th scope="col" data-sort="text">License</th>
+            <th scope="col" data-sort="text">Pricing</th>
+            <th scope="col" data-sort="text">Platforms</th>
+            <th scope="col" data-sort="text">Deployment</th>
+            <th scope="col" data-sort="text">Primary outputs</th>
+            <th scope="col" data-sort="text">Common Uses</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for p in products %}
+          {% set e = p.extra %}
+          <tr>
+            <th scope="row" class="cell-name">
+              <a href="{{ p.permalink | safe }}">{{ p.title }}</a>{% if e.warning %} <a class="warn-flag" href="{{ p.permalink | safe }}" title="{{ e.warning }}" aria-label="Warning: see profile">⚠</a>{% endif %}
+            </th>
+            <td>{{ ui::license_badge(license=e.license | default(value="Unknown"), open_source=e.open_source | default(value=false)) }}</td>
+            <td>{{ e.price_model | default(value="Unknown") }}</td>
+            <td>{{ e.platforms | default(value=[]) | join(sep=", ") | default(value="Unknown") }}</td>
+            <td>{{ e.deployment | default(value=[]) | join(sep=", ") }}</td>
+            <td>{{ e.primary_outputs | default(value=[]) | join(sep=", ") }}</td>
+            <td>{{ e.target_use_cases | default(value=[]) | join(sep=", ") }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section section-alt">
+  <div class="container-wide">
+    <div class="section-head">
+      <h2>Feature matrix</h2>
+      <p>A dot means the capability is confirmed on the vendor's own documentation. A question mark means the sources do not state either way; it is not a claim that the feature is missing.</p>
+    </div>
+
+    <div class="legend" aria-hidden="false">
+      <span class="legend-item"><span class="fcell fcell-yes">●</span> Supported</span>
+      <span class="legend-item"><span class="fcell fcell-no">✕</span> Not supported</span>
+      <span class="legend-item"><span class="fcell fcell-unknown">?</span> Not documented</span>
+    </div>
+
+    <div class="table-scroll">
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th scope="col" class="matrix-feature-head">Feature</th>
+            {% for p in products %}
+            <th scope="col" class="matrix-prod-head"><a href="{{ p.permalink | safe }}">{{ p.title }}</a></th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for g in fdata.groups %}
+          <tr class="matrix-group">
+            <th scope="colgroup" colspan="{{ products | length + 1 }}">{{ g.name }}</th>
+          </tr>
+          {% for f in g.features %}
+          <tr>
+            <th scope="row" class="matrix-feature" title="{{ f.help }}">{{ f.label }}</th>
+            {% for p in products %}
+            <td class="matrix-cell">{{ ui::feature_cell(value=p.extra.features[f.key] | default(value="unknown"), label=f.label) }}</td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container cta-band">
+    <h2>Explore each package in depth</h2>
+    <p>Full profiles with specs, capabilities, pros &amp; cons, a typical workflow and links to official sources.</p>
+    <div class="card-grid">
+      {% for p in products %}
+      {% set e = p.extra %}
+      <a class="prod-card" href="{{ p.permalink | safe }}">
+        <span class="prod-card-name">{{ p.title }}{% if e.warning %} <span class="warn-flag" title="{{ e.warning }}" aria-label="Warning">⚠</span>{% endif %}</span>
+        {% if e.summary %}<span class="prod-card-sum">{{ e.summary }}</span>{% endif %}
+        <span class="prod-card-meta">{{ ui::license_badge(license=e.license | default(value="Unknown"), open_source=e.open_source | default(value=false)) }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

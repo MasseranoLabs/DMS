@@ -1,0 +1,25 @@
+# Zola configuration for dronemappingsoftware.com
+base_url = "https://dronemappingsoftware.com"
+title = "Drone Mapping Software"
+description = "The ultimate buyer's guide to drone mapping software. Compare features, pricing, platforms and outputs across drone mapping & photogrammetry packages."
+
+default_language = "en"
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+minify_html = true
+
+taxonomies = []
+
+[markdown]
+highlight_code = false
+smart_punctuation = false
+
+[extra]
+tagline = "The ultimate buyer's guide to drone mapping software"
+author = "Drone Mapping Software"
+# Feature-matrix legend symbols
+sym_yes = "●"
+sym_partial = "◐"
+sym_no = "✕"
+sym_unknown = "?"

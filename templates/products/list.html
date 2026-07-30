@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "macros/ui.html" as ui %}
+{% set title = section.title %}
+
+{% block content %}
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h1>{{ section.title }}</h1>
+      {% if section.description %}<p>{{ section.description }}</p>{% endif %}
+    </div>
+    <div class="card-grid">
+      {% for p in section.pages %}
+      {% set e = p.extra %}
+      <a class="prod-card" href="{{ p.permalink | safe }}">
+        <span class="prod-card-name">{{ p.title }}{% if e.warning %} <span class="warn-flag" title="{{ e.warning }}" aria-label="Warning">⚠</span>{% endif %}</span>
+        {% if e.summary %}<span class="prod-card-sum">{{ e.summary }}</span>{% endif %}
+        <span class="prod-card-meta">{{ ui::license_badge(license=e.license | default(value="Unknown"), open_source=e.open_source | default(value=false)) }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <p class="muted" style="margin-top:2rem"><a href="{{ get_url(path='@/_index.md') | safe }}#compare">← Compare all software side by side</a></p>
+  </div>
+</section>
+{% endblock content %}

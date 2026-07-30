@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Drone Mapping Software logo">
+  <defs>
+    <linearGradient id="dmsGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+    <clipPath id="dmsClip"><rect width="64" height="64" rx="15"/></clipPath>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#dmsGrad)"/>
+  <!-- topographic map contours -->
+  <g clip-path="url(#dmsClip)" fill="none" stroke="#ffffff" stroke-opacity="0.30" stroke-width="1.6" stroke-linecap="round">
+    <path d="M6 47 C 17 41, 27 45, 34 41 S 50 34, 60 39"/>
+    <path d="M4 55 C 16 50, 27 53, 35 49 S 52 43, 62 47"/>
+  </g>
+  <!-- quadcopter, top-down -->
+  <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M32 32 L20 20 M32 32 L44 20 M32 32 L20 44 M32 32 L44 44"/>
+    <circle cx="20" cy="20" r="6"/>
+    <circle cx="44" cy="20" r="6"/>
+    <circle cx="20" cy="44" r="6"/>
+    <circle cx="44" cy="44" r="6"/>
+  </g>
+  <circle cx="32" cy="32" r="6.5" fill="#ffffff"/>
+  <circle cx="32" cy="32" r="3" fill="#2dd4bf"/>
+</svg>

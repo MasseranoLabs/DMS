@@ -1,0 +1,59 @@
+# Canonical feature list: the single source of truth for feature-matrix columns.
+# Adding a feature here (plus a value in each product's [extra.features]) is all
+# that's needed to add a column. Keys must match the keys used in product front matter.
+
+[[groups]]
+name = "Inputs & sensors"
+features = [
+  { key = "image_input",   label = "Image input",          help = "Accepts photographs / images as input (any angle)" },
+  { key = "multispectral", label = "Multispectral",        help = "Multispectral imagery / sensors" },
+  { key = "thermal",       label = "Thermal",              help = "Thermal imagery" },
+  { key = "lidar",         label = "LiDAR data",           help = "Imports / processes LiDAR point clouds" },
+  { key = "video",         label = "Video input",          help = "Accepts video as an input" },
+]
+
+[[groups]]
+name = "Georeferencing"
+features = [
+  { key = "gcp",             label = "Ground Control Points", help = "Manual GCP marking for georeferencing" },
+  { key = "rtk_ppk",         label = "RTK / PPK",             help = "Uses RTK/PPK camera geotags" },
+  { key = "accuracy_report", label = "Accuracy report",       help = "Quality / accuracy report output" },
+  { key = "coordinate_systems", label = "Coordinate systems", help = "Georeferencing to standard coordinate systems (EPSG / CRS)" },
+]
+
+[[groups]]
+name = "Outputs"
+features = [
+  { key = "orthomosaic", label = "Orthomosaic",     help = "Orthophoto / orthomosaic" },
+  { key = "dsm",         label = "DSM",             help = "Digital Surface Model" },
+  { key = "dtm",         label = "DTM",             help = "Digital Terrain Model (bare earth)" },
+  { key = "point_cloud", label = "Point cloud",     help = "Dense 3D point cloud" },
+  { key = "mesh_3d",     label = "3D mesh",         help = "3D textured mesh model" },
+  { key = "contours",    label = "Contours",        help = "Contour lines" },
+  { key = "tiles_3d",    label = "3D tiles",        help = "Tiled / streamable 3D model" },
+  { key = "gaussian_splatting", label = "Gaussian splatting", help = "Generates or exports 3D Gaussian splats (3DGS)" },
+  { key = "cad_export",  label = "CAD export",      help = "Export to CAD formats (DXF / DWG / LandXML)" },
+]
+
+[[groups]]
+name = "Processing & platform"
+features = [
+  { key = "desktop",     label = "Desktop",         help = "Runs as a desktop application" },
+  { key = "cloud",       label = "Cloud",           help = "Vendor cloud processing" },
+  { key = "self_hosted", label = "Self-hosted",     help = "Self-hosted / on-premise server" },
+  { key = "api",         label = "API / automation", help = "API or scripting for automation" },
+  { key = "gpu",         label = "GPU acceleration", help = "GPU-accelerated processing" },
+  { key = "web_viewer",  label = "Web viewer",       help = "Browser-based viewer for sharing results" },
+  { key = "flight_planning", label = "Flight planning", help = "Drone flight / mission planning" },
+]
+
+[[groups]]
+name = "Analysis"
+features = [
+  { key = "measurements",     label = "Measurements",     help = "In-viewer distance / area measurement" },
+  { key = "volume",           label = "Volumes",          help = "Volume calculation" },
+  { key = "veg_indices",      label = "Veg. indices",     help = "Vegetation indices (NDVI, etc.)" },
+  { key = "change_detection", label = "Change detection", help = "Multi-temporal / change detection" },
+  { key = "classification",   label = "Classification",   help = "Point cloud classification" },
+  { key = "annotations",      label = "Annotations",      help = "Annotations or markups in a viewer" },
+]

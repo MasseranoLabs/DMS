@@ -1,0 +1,41 @@
+name: Refresh product data
+
+# On-demand only; never scheduled. Re-fetches each product's trusted sources,
+# regenerates content/products/*.md, and opens a PR with any changes for review.
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Optional space-separated product slugs to refresh (blank = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r scripts/requirements.txt
+      - name: Regenerate product data
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/regen.py ${{ github.event.inputs.slugs }}
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "data: refresh product profiles from trusted sources"
+          title: "Refresh product data from trusted sources"
+          body: |
+            Automated refresh via `scripts/regen.py`.
+
+            **Review each change against the product's trusted sources before merging,**
+            especially any feature whose value changed (yes / no / unknown).
+          branch: refresh/product-data
+          delete-branch: true
