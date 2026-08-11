@@ -1,6 +1,6 @@
 +++
 title = "Drone Mapping Software"
-description = "The ultimate guide to finding drone mapping software that works for you. Compare features, pricing, platforms and outputs across drone mapping & photogrammetry packages. Every fact is sourced from the vendors."
+description = "The ultimate guide to drone mapping software. With our easy comparison of drone software packages, features, pricing and platforms you can skip the marketing and go straight to the facts."
 template = "index.html"
 sort_by = "none"
 +++
