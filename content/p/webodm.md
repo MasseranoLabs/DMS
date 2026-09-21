@@ -23,7 +23,7 @@ primary_outputs = [
   "Contours",
 ]
 target_use_cases = ["Surveying & mapping", "Agriculture", "Construction", "Mining & aggregates"]
-latest_version = "3.2.7"
+latest_version = "3.3.0"
 first_release_year = "2016"
 official_url = "https://webodm.org"
 key_features = [
